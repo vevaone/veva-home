@@ -1,2 +1,0 @@
-# veva-home
-for website
