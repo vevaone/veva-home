@@ -1203,7 +1203,7 @@ options: {
                     <div class="col-xs-12 col-sm-12 col-md-5 col-md-offset-1 wow fadeInUp" data-wow-delay="0.3s">
                       <h4>Apply to become an analyst!</h4>
                       <div class="form-group">
-                    	    <form action="mailtest.php" method="post" id="contact-form">
+                    	    <form action="#" method="post" id="contact-form">
                     	        <div class="input-field">
                     	            <input type="text" class="form-control" placeholder="Your Name" name="name">
                     	        </div>
@@ -1213,7 +1213,7 @@ options: {
                     	        <div class="input-field">
                     	            <textarea class="form-control" placeholder="Brief Bio" rows="3" name="message"></textarea>
                     	        </div>
-                    	        <button class="btn btn-send" type="submit">Apply</button>
+                    	        <button class="btn btn-send" type="submit" onclick="sendMail()">Apply</button>
                     	    </form>
 
                     	    <div id="success">
@@ -1249,7 +1249,32 @@ options: {
         </footer>
 
 
+        <script>
+
+
+        function sendMail (
+
+          var fromName = $("#name").val()
+          var fromEmail = $("#email").val()
+          var fromMsg = $("#message").val()
+
+        Email.send(fromEmail,
+            "reuben@veva.one",
+            "Analyst Application",
+            fromMsg,
+            "52.41.77.72",
+            name,
+            "");
+
+          );
+
+        </script>
+
+
         <!-- Js -->
+
+        <script src="https://smtpjs.com/v2/smtp.js"></script>
+
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
         <script src="js/vendor/jquery-1.10.2.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
