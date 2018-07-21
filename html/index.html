@@ -7,6 +7,10 @@
 5. hook up mailchimp
 -->
 
+<!--
+Glyphicons:  Ionicons
+-->
+
 
 <!DOCTYPE html>
 <html class="no-js">
@@ -1001,6 +1005,39 @@ options: {
         </section>
 
 
+
+
+<!--
+TEST SECTION
+-->
+
+<!--
+
+<script>
+// using SendGrid's v3 Node.js Library
+// https://github.com/sendgrid/sendgrid-nodejs
+const sgMail = require('@sendgrid/mail');
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+const msg = {
+  to: 'reuben@veva.one',
+  from: 'test@example.com',
+  subject: 'Sending with SendGrid is Fun',
+  text: 'and easy to do anywhere, even with Node.js',
+  html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+};
+sgMail.send(msg);
+
+
+
+</script>
+
+-->
+
+<!--
+end TEST SECTION
+-->
+
+
         <!--
         About start
         ==================== -->
@@ -1090,6 +1127,20 @@ options: {
                               </span>
 
                             </div>
+
+                          <div class="horizontalFlex protocolPad wow" data-wow-delay="0.3s">
+                            <div class="about-item">
+
+                              <i class="ion-ios-filing protocolIcon"></i>
+
+                            </div>
+
+                            <span class="protocolText headerPad" style="text-align:center">
+                              <i><b>Sample Briefs:</b></i>
+                              <br>
+                               <a href = "./resources/sampleBriefs/BullSample.pdf">Bull</a> | <a href = "./resources/sampleBriefs/BearSample.pdf">Bear</a>
+                            </span>
+                          </div>
 
 
                         </div>
